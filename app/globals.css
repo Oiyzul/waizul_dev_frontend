@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: start;
+  padding-block: 100px;
+  /* background-color: black; */
+}
+
+.app {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* overflow-x: hidden; */
+  overflow-y: auto;
+}
+
+
+@media only screen and (max-width: 540px) {
+  .section {
+    scroll-snap-align: end;
+  }
+  #contact {
+    scroll-snap-align: start;
+  }
+}

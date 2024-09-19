@@ -1,0 +1,26 @@
+.loader {
+	width: 100vw;
+	height: 100vh;
+  display: grid;
+  place-content: center;
+  color: white;
+  font-size: 3rem;
+  animation: loadingAnimation 2.4s ease forwards;
+}
+.loader::before,
+.loader::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+.loader::before {
+	background: rgb(7, 16, 7);
+	animation: loadingAnimation 2s ease forwards;
+}
+
+@keyframes loadingAnimation{
+  to{
+    left: 100%;
+    background-color: rgb(7, 16, 7);
+  }
+}
